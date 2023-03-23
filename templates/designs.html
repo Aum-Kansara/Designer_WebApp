@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button input{
+            width: 100%;
+            height: 45px;
+            border: none;   
+            font-weight: 600;
+            font-size: 17px;
+            background: #333;
+            color:#fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container{
+            display:flex;
+            flex-wrap:wrap;
+            width: 100%;
+            height: 100vh;    
+            justify-content: center;
+        }
+        .card{
+            margin: 25px;
+            width:300px;
+            height: 400px;
+            padding: 10px;
+            background-color: #f7f7f7;
+            box-shadow: 0 0 10px 2px #aaa;
+            transition: 0.2s ease-out;
+            border-radius: 10px;
+        }
+        .card:hover{
+            scale: 102%;
+            box-shadow: 0 0 30px -5px rgb(61, 66, 67);
+            transition: 0.2s ease-in;
+        }
+        .card img{
+            width: 100%;
+            height: 285px;
+        }
+        .card img:hover{
+            cursor: pointer;
+        }
+        .info{
+            display: grid;
+            padding: 5px 10px 5px 10px;
+            grid-template-columns: 6fr 1fr;
+        }
+        h3{
+            align-self: center;
+        }
+
+        span{
+            background-color: rgb(8, 109, 8);
+            justify-content: center;
+            width:63px;
+            align-self: center;
+            color: #fff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        .container .popup-img{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            display: none;
+        }
+        .container .popup-img span{
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 60px;
+            font-weight: bolder;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .container .popup-img img{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 5px solid #fff;
+            border-radius: 5px;
+            width: 440px;
+            object-fit: cover;
+        }
+
+        @media (max-width:768px){
+            .container .popup-img img{
+                width: 95%;
+            }
+        }
+    </style>
+    <title>Designs</title>
+</head>
+<body>
+    
+    <div class="container">
+    {% for data in design_data %}
+        <div class="card">
+            <form action="/order" method="POST">
+                
+                <input type="hidden" value="{{dress_type}}/{{data[0]}}" name="imgPath">
+                <img src="../static/{{dress_type}}/{{data[0]}}" alt="Image">
+                <div class="info">
+                    <h3>{{data[1]}}</h3>
+                    <span>{{data[2]}}</span>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Order Now">
+                </div>
+            </form>
+        </div>
+        {% endfor %}
+        <div class="popup-img">
+            <span>&times;</span>
+            <img src="../static/dress/d4.jpg" alt="preview image">
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.container img').forEach(img=>{
+            img.onclick=()=>{
+                document.querySelector('.popup-img').style.display='block'; 
+                document.querySelector('.popup-img img').src=img.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup-img span').onclick=()=>{
+            document.querySelector('.popup-img').style.display='none'; 
+        }
+    </script>
+</body>
+</html>

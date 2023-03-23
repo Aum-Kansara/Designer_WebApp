@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Design</title>
+</head>
+<body>
+    <form action="/upload_design" method="post" enctype="multipart/form-data">
+        <label for="type_of_order">Type of Order :</label><input type="text" name="type_of_order" placeholder="example kurta, dress etc." required>
+        <input type="file" name="upload_file" placeholder="Enter Name" id="upload_file" onchange="getImagePreview(event)" accept="image/*" required>
+    <div id="preview"></div>
+        <input type="submit" value="Submit" >
+    </form>
+    <script>
+        function getImagePreview(event)
+        {   
+            var image=URL.createObjectURL(event.target.files[0]);
+            var imagediv= document.getElementById('preview');
+            var newimg=document.createElement('img');
+            imagediv.innerHTML='';
+            newimg.src=image;
+            newimg.width="300";
+            imagediv.appendChild(newimg);
+        }
+        </script>
+</body>
+</html>

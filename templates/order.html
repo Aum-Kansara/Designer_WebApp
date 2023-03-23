@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <style>
+        .button input{
+            margin-top: 13px;
+            height: 45px;
+            border: none;   
+            font-weight: 600;
+            font-size: 17px;
+            background: rgb(23, 82, 230);
+            color:#fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img{
+            width: 900px;
+            height: 650px;
+        }
+        .img-prev{
+            width: 1200px;
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/order" method="POST"></form>
+        <div class="wrapper">
+            <div class="img-prev">
+                <img src="../static/dress/d1.jpg" alt="Image Preview">
+            </div>
+            <div class="button">
+                <input type="submit" value="Order Now">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

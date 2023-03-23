@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+</head>
+<!-- <body background="../body_bg.jpg">
+    <nav class="navbar">
+        <div class="left-nav">
+        <ul class="options">
+            <div class="logo"><a href="{{url_for('index')}}"><img src="../static/images/Logo.png" alt="LOGO" ></a></img></div>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Styles">Styles</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
+        <div class="right-nav">
+            <button class="btn signup" {{log}}><a href="{{url_for('signUpPage')}}">SignUp</a></button>
+            <button class="btn login" {{log}}><a href="{{url_for('loginPage')}}">Login</a></button>
+            <div class="user" {{auth_user}}>
+                <i class="fas fa-user"></i>
+                <label>{{user_name}}</label>
+            </div>
+        </div>
+    </nav>
+    <div class="bg_img" id="Home">
+        <img src="../static/images/bg.jpg" alt="background">
+        <p>Dev Designer</p>
+        <h3>Designer Dress, Blouse & many more</h3>
+        <a href="{{url_for('orderNow')}}"><button class="btn big" ><b>ORDER NOW</b></button></a>
+    </a>
+    </div>
+    <hr>
+    <div class="services" id="Services">
+        <h1>Services</h1>
+        <br>
+        <ul class="services list">
+            <li><a>Designer Blouse</a></li>
+            <li><a>Dress</a></li>
+            <li><a>Chaniya Choli</a></li>
+            <li><a>Kurta</a></li>
+            <li><a>Payjama</a></li>
+            <li><a>Stylish</a></li>
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <h1>Styles</h1>
+    <br>
+    <div class="styles" id="Styles">
+        <div class="card">
+        <img src="../static/images/d1.jpg" alt="">
+            <div class="info">
+                <h3>Dress 1</h3>
+                <span>390 Rs.</span>
+            </div>
+        </div>
+        <div class="card">
+            <br>
+            <img src="../static/images/d4.webp" alt="">
+                <div class="info">
+                    <h3>Dress 2</h3>
+                    <span>490 Rs.</span>
+                </div>
+            </div>
+            <div class="card">
+                <br>
+                <img src="../static/images/d3.webp" alt="">
+                    <div class="info">
+                        <h3>Dress 3</h3>
+                        <span>310 Rs.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <br>
+                    <img src="../static/images/d5.jpg" alt="">
+                        <div class="info">
+                            <h3>Dress 4</h3>
+                            <span>210 Rs.</span>
+                        </div>
+                    </div>
+                    <div >
+                        <a href="{{url_for('selectDesigns')}}"><button class="btn small">See all</button></a>
+                    </div>
+    </div>
+    
+    <hr>
+    <div class="text about" id="About">
+        <h1>About US</h1>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fdkfmdkfd fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fdkfmdkfd fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fdkfmdkfd fkdfd fk</p>
+    </div>
+    <hr>
+    <div class="contact" id="Contact">
+        <h1>Contact US</h1>
+        <form action="/contact" method="POST">
+            <label>Enter Your Name :</label>
+            <input type="text" placeholder="Enter Name" name="name" required/>
+            <br>
+            <label>Enter Your Email :</label>
+            <input type="email" placeholder="Enter Email" name="email" required/>
+            <br>
+            <label>Enter Your Feedback :</label>
+            <br>
+            <textarea name="contact-info" id="contactInfo" cols="50" rows="10" placeholder="Enter your feedback" required></textarea>
+            <br>
+            <input type="submit" value="Submit" name="submit">
+        </form>
+    </div>
+</body> -->
+<body background="body_bg.jpg">
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo"><ion-icon name="flower-outline"></ion-icon>
+                <h4>Dev Designer</h4>
+            </div>
+            
+            
+            <!-- <img src="Logo.png" alt="logo" class="logo"> -->
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Styles">Styles</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+            <div class="btn">
+                <a href="{{url_for('loginPage')}}"><button>Login</button></a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Dev Designer</h1>
+            <p>To Order New Designer Pattens , Click <a href="https://www.google.com" target="_blank" style="color: #009688;">Here</a></p>
+            <div class="page_btn">
+                <a href="{{url_for('selectDesigns')}}"><button type="button"><span></span>Check Designs</button></a>
+                <a href="{{url_for('orderNow')}}"><button type="button"><span></span>Give Feedback</button></a>
+            </div>
+        </div>
+    </div>
+    <hr>   
+    <div class="services" id="Services">
+        <h1>Services</h1>
+        <br>
+        <ul class="services list">
+            <li><a>Designer Blouse</a></li>
+            <li><a>Dress</a></li>
+            <li><a>Chaniya Choli</a></li>
+            <li><a>Kurta</a></li>
+            <li><a>Payjama</a></li>
+            <li><a>Stylish</a></li>
+        </ul>
+    </div>
+    <br>
+    <hr>
+    <h1>Styles</h1>
+    <br>
+    <div class="styles" id="Styles">
+        <div class="card">
+        <img src="../static/images/d1.jpg" alt="">
+            <div class="info">
+                <h3>Dress 1</h3>
+                <span>390 Rs.</span>
+            </div>
+        </div>
+        <div class="card">
+            <br>
+            <img src="../static/images/d4.webp" alt="">
+                <div class="info">
+                    <h3>Dress 2</h3>
+                    <span>490 Rs.</span>
+                </div>
+            </div>
+            <div class="card">
+                <br>
+                <img src="../static/images/d3.webp" alt="">
+                    <div class="info">
+                        <h3>Dress 3</h3>
+                        <span>310 Rs.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <br>
+                    <img src="../static/images/d5.jpg" alt="">
+                        <div class="info">
+                            <h3>Dress 4</h3>
+                            <span>210 Rs.</span>
+                        </div>
+                    </div>
+                    <div >
+                        <a href="{{url_for('selectDesigns')}}"><button class="btn small">See all</button></a>
+                    </div>
+    </div>
+    
+    <hr>
+    <div class="text about" id="About">
+        <h1>About US</h1>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fdkfmdkfd fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fdkfmdkfd fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fkdfd fk</p>
+        <br>
+        <p>Hello There, askj kdfdf dkfjdkfm dkfdf dkfjdfdf kfjdf dfkdf dfdkjfd fdfkdf dfjdfmd, fdknfdmfndj djfjd fdjfjd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fddfdf dfdkmfkdmfdkfmd fdkfmdkfd fkdfd fk fdkfmdkfd fkdfd fk</p>
+    </div>
+    <hr>
+    <div class="contact" id="Contact">
+        <h1>Contact US</h1>
+        <form action="/contact" method="POST">
+            <label>Enter Your Name :</label>
+            <input type="text" placeholder="Enter Name" name="name" required/>
+            <br>
+            <label>Enter Your Email :</label>
+            <input type="email" placeholder="Enter Email" name="email" required/>
+            <br>
+            <label>Enter Your Feedback :</label>
+            <br>
+            <textarea name="contact-info" id="contactInfo" cols="50" rows="10" placeholder="Enter your feedback" required></textarea>
+            <br>
+            <input type="submit" value="Submit" name="submit">
+        </form>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

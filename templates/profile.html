@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile Page for user {{user}}</h1>
+    <form action="/designs" method="POST">
+        <select name="dress_type" id="dress_type">
+            <option value="dress">Dress</option>
+            <option value="kurta">Kurta</option>
+          </select>
+    <input type="submit" value="Submit">
+    </form>
+    <form action="/custom_design" method="POST">
+        <input type="submit" value="Upload Custom Design">
+    </form>
+    <form action="/myOrders" method="POST">
+        <input type="submit" value="My Orders">
+    </form>
+    <form action="/dropsession" method="POST">
+        <input type="submit" value="Logout">
+    </form>
+</body>
+</html>

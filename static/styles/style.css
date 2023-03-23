@@ -1,0 +1,234 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    background-color: rgb(7, 34, 65);
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.navbar .logo{
+    align-items:center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    border: 2px solid black;
+    overflow: hidden;
+    
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+.options li{
+    margin: 30px 50px;
+}
+.options li a{
+    color: white;
+}
+.options li a:hover{
+    color: grey;
+}
+.left-nav{
+    margin: 25px 40px;
+    align-items: center;
+    justify-content: left;
+}
+.right-nav{
+    margin: 30px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.right-nav input{
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    outline: none;
+    width: 170px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.btn{
+    margin: 5px;
+    width: 80px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.bg_img{
+    position: inherit;
+}
+.bg_img img{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;   
+}
+.bg_img p{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    top: 330px;
+    overflow: hidden;
+    left: 520px;
+}
+.bg_img h3{
+    position: absolute;
+    color: white;
+    top: 395px;
+    left: 520px;
+}
+.bg_img .btn{
+    position: absolute;
+    top: 445px;
+    left: 42%;
+    width: 180px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.text{
+    /* background-color: rgb(7, 34, 65); */
+    font-size: 22px;
+    margin: 5px;
+    padding: 10px;
+}
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    width: 100%;
+    height: 100vh;    
+    justify-content: center;
+}
+.card{
+    margin: 20px;
+    width:300px;
+    height: 350px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px 2px #aaa;
+    transition: 0.2s ease-out;
+    border-radius: 10px;
+}
+.card:hover{
+    scale: 102%;
+    box-shadow: 0 0 30px -5px rgb(61, 66, 67);
+    transition: 0.2s ease-in;
+}
+.card img{
+    width: 100%;
+    height: 285px;
+}
+.info{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 6fr 1fr;
+}
+h3{
+    align-self: center;
+}
+
+span{
+    background-color: rgb(8, 109, 8);
+    justify-content: center;
+    width:65px;
+    align-self: center;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+.popup{
+    position: fixed;
+    top: 100;
+    left: 100;
+}
+.services{
+    margin: 20px 10px;
+    align-items: center;
+    justify-content: center;
+}
+.services h1{
+    margin: 10px 20px;
+    font-size: 44px;
+}
+.services .list{
+    list-style-type: disc;
+    font-size: larger;
+    margin: 15px;
+    padding: 10px;
+}
+.contact{
+    margin: 10px;
+    padding: 10px;
+}
+.contact h1{
+    margin: 20px;
+}
+.contact input,label{
+    margin: 10px;
+    padding : 10px;
+    border-radius: 5px;
+}
+.contact textarea{
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+.contact .btn{
+    margin-left: 50px;
+}
+h1{
+    font-size: 44px;
+    margin: 10px;
+    padding: 10px;
+}
+.styles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.backBtn{
+    padding: 20px;
+    margin: 20px 42%;
+    align-items: center;
+    justify-content: center;
+}
+.backBtn .btn{
+    font-size: 30px;
+    width: 150px;
+    height: 50px;
+}
+.user{
+    align-items: center;
+    justify-content: center;
+}
+label{
+    font-size: 22px;
+    /* color: white; */
+}
+i{
+    color: #ccc;
+}

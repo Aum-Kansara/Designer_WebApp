@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Popins',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f7f7f7;
+        }
+        .title{
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+        }
+        .left-div img{
+            width: 100%;
+            height: 185px;
+        }
+        .wrapper{
+            display: flex;
+            background: #fff;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                        0 32px 64px -48px rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            margin: 10px;
+        }
+        .wrapper .left-div{
+            margin: 10px;
+            width: 35%;
+        }
+        .wrapper .right-div{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content:center;
+            /* align-items: center; */
+        }
+        .wrapper .right-div h2{
+            margin: 5px;
+        }
+        .button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px;
+        }
+        .button input{
+            width: 100%;
+            height: 100%;
+            border: none;   
+            font-weight: 600;
+            font-size: 15px;
+            background: rgb(12, 60, 88);
+            color:#fff;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .ordernow input{
+            background-color: rgb(35, 34, 34);
+        }
+        .date{
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="title"><h1>Received Orders</h1><hr></div>
+            <div class="button"><a href="{{url_for('authenticate')}}"><input type="button" value="Go Back"></a></div>
+                {% if orders==[] %}
+                    <form action="/" method="POST">
+                    <h2 style="padding: 10px;font-size: 24;margin: 10px;color: red;">No Orders Yet</h2>
+                    <div class="button ordernow">
+                        <input type="submit" value="Order Now" onclick="">
+                    </div>
+                    </form>
+                {% else %}
+                    {% for i in range(no_of_orders) %}
+                    <form action="/deliveryDate" method="POST">
+                        <div class="wrapper">
+                            <input type="hidden" value="{{orders[i][0]}}" name="order_id">
+                            <div class="left-div">
+                                <img src="{{orders[i][3]}}" alt="Image">
+                            </div>
+                            <div class="right-div">
+                                <h2 style="color: green;">Name : {{user_names[i]}}</h2>
+                                <h2>Order ID : {{orders[i][0]}}</h2>
+                                <h2>Date : {{orders[i][4]}}</h2>
+                                {% if orders[i][6] == None %}
+                                <h2>Delivery Date : Not Declared</h2>
+                                {% else %}
+                                <h2>Delivery Date : {{orders[i][6]}}</h2>
+                                {% endif %}
+                                <input type="date" class="date" name="delivery_date" required>
+                                <div class="button"><input type="submit"  value="Set Date"></div>
+                                <h2>Payment Status : {{orders[i][7]}}</h2>
+                                <div class="button"><input type="button"  value="Send Payment Reminder" onclick="alert('Remender sent to {{user_names[i]}}')"></div>
+                            </div>
+                        </div>
+                    </form>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </body>
+    </html>
